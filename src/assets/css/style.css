@@ -14,7 +14,7 @@
     box-shadow: 0 5px 20px rgba(0,0,0,0.2), 0px 0px 5px rgba(0,0,0,0.2);
     position:relative;
     background-color: #ffffff;
-   
+   user-select: none;
 
 }
 
