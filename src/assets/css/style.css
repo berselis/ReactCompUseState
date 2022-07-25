@@ -14,6 +14,7 @@
     box-shadow: 0 5px 20px rgba(0,0,0,0.2), 0px 0px 5px rgba(0,0,0,0.2);
     position:relative;
     background-color: #ffffff;
+   
 
 }
 
@@ -33,5 +34,14 @@
 
 .btn-quote > i{
     font-size:24px;
+}
+
+.btn-quote{
+    width: 42px;
+    height: 42px;
+    border-radius: 50% !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
 }
 

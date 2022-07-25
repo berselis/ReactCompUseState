@@ -4,19 +4,21 @@ import Author from './QuoteComponent/Author';
 import Button from './QuoteComponent/Button';
 import jsonDB from '../assets/json/quotes.json';
 import jsonColorsDB from '../assets/json/colors.json';
-
 import { useState } from 'react';
 
-let  quotePhrase = {
-  "Phrase": jsonDB[0].quote,
-  "Author": jsonDB[0].author,
-  "Color": jsonColorsDB[0].hex
+let xPhrases = 0;
+let xColor = 0;
+
+let quotePhrase = {
+  "Phrase": jsonDB.at(xPhrases).quote,
+  "Author": jsonDB.at(xPhrases).author,
+  "Color": jsonColorsDB.at(xColor).hex
 };
 
 
 const GetItemFromDB = (e) => {
-  let xPhrases = Math.floor(Math.random() * jsonDB.length);
-  let xColor = Math.floor(Math.random() * jsonColorsDB.length);
+  xPhrases = Math.floor(Math.random() * jsonDB.length);
+  xColor = Math.floor(Math.random() * jsonColorsDB.length);
 
   const phrase = jsonDB.at(xPhrases);
   const color = jsonColorsDB.at(xColor);
@@ -38,11 +40,8 @@ const Box = () => {
   const ChangePhrases = () => {
     setQuoteInstance(GetItemFromDB());
   }
-
-
-
   return (
-    <div className='layout' style={{background:quotePhrase.Color}}>
+    <div className='layout' style={{ background: quotePhrase.Color }}>
       <figure className="text-end">
         <Block fontColor={quotePhrase.Color} phrase={quotePhrase.Phrase} />
         <Author fontColor={quotePhrase.Color} objAuthor={quotePhrase.Author} />
