@@ -1,11 +1,11 @@
-import './App.css';
+import Quotebox from './componets/QuoteBox';
+import './assets/css/style.css';
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <div className="App">
-     
+        <Quotebox/>
     </div>
   )
 }
