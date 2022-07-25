@@ -6,8 +6,8 @@ import jsonDB from '../assets/json/quotes.json';
 import jsonColorsDB from '../assets/json/colors.json';
 import { useState } from 'react';
 
-let xPhrases = 0;
-let xColor = 0;
+let xPhrases = Math.floor(Math.random() * jsonDB.length);
+let xColor = Math.floor(Math.random() * jsonColorsDB.length);
 
 let quotePhrase = {
   "Phrase": jsonDB.at(xPhrases).quote,

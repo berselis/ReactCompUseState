@@ -1,6 +1,4 @@
 import React from 'react';
-import arrow from '../../assets/media/arrow-right-circle-fill.svg';
-
 
 const Button = ({ fontColor, eventClick }) => {
   return (
